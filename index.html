@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martín D'Addona | Desarrollador Web</title>
+  <meta name="description" content="Martín D'Addona, desarrollador web en Buenos Aires. Hago páginas web y tiendas online para emprendimientos. Formado en Desarrollo Web y Data Analytics (Coderhouse), estudiante de Sistemas en la UNLa.">
+  <meta property="og:title" content="Martín D'Addona | Desarrollador Web">
+  <meta property="og:description" content="Páginas web y tiendas online para emprendimientos. Mirá mis proyectos.">
+  <meta property="og:image" content="assets/img/pisada.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="nav__logo">MD<span>.</span></a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacion">Formación</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto" class="btn btn--small">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero__inner">
+        <p class="hero__tag mono">&lt;hola mundo /&gt;</p>
+        <h1 class="hero__title">Soy <span class="accent">Martín D'Addona</span></h1>
+        <p class="hero__role">Desarrollador web <span class="sep">·</span> Data Analytics</p>
+        <p class="hero__text">
+          Hago páginas web y tiendas online para emprendimientos: catálogos, carrito,
+          pagos con Mercado Pago y paneles para manejar el stock. Estudio Licenciatura en
+          Sistemas en la UNLa.
+        </p>
+        <div class="hero__actions">
+          <a href="#proyectos" class="btn">Ver proyectos</a>
+          <a href="https://wa.me/5491128383634" class="btn btn--ghost" target="_blank" rel="noopener">Escribime por WhatsApp</a>
+        </div>
+        <ul class="hero__meta">
+          <li>📍 Lomas de Zamora, Buenos Aires</li>
+          <li>🟢 Disponible para proyectos freelance y puestos junior</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">01.</span> Proyectos</h2>
+
+        <div class="projects">
+          <article class="project project--featured">
+            <a href="https://pisada.tienda-ar.workers.dev/" target="_blank" rel="noopener" class="project__img">
+              <img src="assets/img/pisada.png" alt="Página de inicio de Pisada, tienda de zapatillas" loading="lazy">
+            </a>
+            <div class="project__info">
+              <p class="project__label mono">Tienda online · Demo</p>
+              <h3>Pisada: tienda de zapatillas</h3>
+              <p>
+                Tienda completa con 30 modelos en 6 categorías, guía de talles y fotos que
+                cambian según el color que elegís. Tiene carrito y tres formas de pago:
+                tarjeta, Mercado Pago y transferencia.
+              </p>
+              <p>
+                Incluye un <strong>panel de administración</strong> con ingreso por Google para
+                cargar modelos, talles, stock y fotos sin tocar el código.
+              </p>
+              <ul class="tags">
+                <li>HTML</li><li>SCSS</li><li>JavaScript</li><li>Mercado Pago</li>
+                <li>Base de datos</li><li>Cloudflare</li><li>GitHub</li>
+              </ul>
+              <div class="project__links">
+                <a href="https://pisada.tienda-ar.workers.dev/" target="_blank" rel="noopener" class="btn btn--small">Ver web ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <a href="https://trama.tienda-ar.workers.dev/" target="_blank" rel="noopener" class="project__img">
+              <img src="assets/img/trama.png" alt="Página de inicio de TRAMA, tienda de ropa urbana" loading="lazy">
+            </a>
+            <div class="project__info">
+              <p class="project__label mono">Tienda online · Demo</p>
+              <h3>TRAMA: ropa urbana</h3>
+              <p>
+                Tienda de ropa con fotos por color, bolsa de compras y stock por producto,
+                color y talle. Se puede pagar con Mercado Pago o por transferencia, y el
+                panel registra las ventas de WhatsApp, Instagram, el local y la web.
+              </p>
+              <ul class="tags">
+                <li>JavaScript</li><li>Mercado Pago</li><li>Base de datos</li><li>Cloudflare</li>
+              </ul>
+              <div class="project__links">
+                <a href="https://trama.tienda-ar.workers.dev/" target="_blank" rel="noopener" class="link">Ver web ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <a href="https://dulce-deleite-pasteleria.tienda-ar.workers.dev/" target="_blank" rel="noopener" class="project__img">
+              <img src="assets/img/dulce-deleite.png" alt="Página de inicio de Dulce Deleite, pastelería artesanal" loading="lazy">
+            </a>
+            <div class="project__info">
+              <p class="project__label mono">Cliente real · Pastelería</p>
+              <h3>Dulce Deleite</h3>
+              <p>
+                Web y catálogo de una pastelería artesanal. El cliente arma su pedido en el
+                carrito y lo coordina por WhatsApp. Los precios y las fotos se actualizan
+                fácil desde GitHub.
+              </p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>WhatsApp</li><li>Cloudflare Pages</li>
+              </ul>
+              <div class="project__links">
+                <a href="https://dulce-deleite-pasteleria.tienda-ar.workers.dev/" target="_blank" rel="noopener" class="link">Ver web ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__img">
+              <img src="assets/img/technova.png" alt="Página de inicio de TechNova Solutions" loading="lazy">
+            </div>
+            <div class="project__info">
+              <p class="project__label mono">Proyecto final · Coderhouse</p>
+              <h3>TechNova Solutions</h3>
+              <p>
+                Sitio institucional de una empresa de tecnología. Es mi proyecto final del
+                curso de Desarrollo Web: estructura semántica, diseño responsive y SEO.
+              </p>
+              <ul class="tags">
+                <li>HTML5</li><li>SASS</li><li>Bootstrap</li><li>Git</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">02.</span> ¿Tenés un emprendimiento?</h2>
+        <p class="section__intro">
+          Te armo la web para que tus clientes vean lo que vendés y te compren más fácil.
+        </p>
+        <div class="services">
+          <article class="card">
+            <div class="card__icon">🛍️</div>
+            <h3>Página web o catálogo</h3>
+            <p>Tus productos con fotos y precios, y un carrito que te manda el pedido por WhatsApp. La tenés lista en 5 días hábiles.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">💳</div>
+            <h3>Tienda online</h3>
+            <p>Pagos con Mercado Pago o transferencia y un panel para manejar stock, ventas y productos.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🔧</div>
+            <h3>Mantenimiento</h3>
+            <p>Me encargo de actualizar precios, fotos y textos todos los meses para que vos te ocupes de vender.</p>
+          </article>
+        </div>
+        <div class="services__cta">
+          <a href="https://wa.me/5491128383634?text=Hola%20Mart%C3%ADn%2C%20vi%20tu%20portafolio%20y%20quiero%20consultarte%20por%20una%20web" target="_blank" rel="noopener" class="btn">Pedí tu presupuesto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">03.</span> Habilidades</h2>
+        <div class="skills">
+          <article class="card">
+            <h3>🌐 Front-end</h3>
+            <ul class="chips">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>SASS / SCSS</li>
+              <li>Bootstrap</li><li>Flexbox</li><li>CSS Grid</li>
+              <li>Diseño responsive</li><li>SEO básico</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>🚀 Publicación e integraciones</h3>
+            <ul class="chips">
+              <li>Cloudflare</li><li>Mercado Pago</li><li>Login con Google</li>
+              <li>Bases de datos</li><li>Git</li><li>GitHub</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>📊 Data Analytics</h3>
+            <ul class="chips">
+              <li>SQL</li><li>Power BI</li><li>Excel</li><li>Análisis de datos</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>🤝 Habilidades blandas</h3>
+            <ul class="chips">
+              <li>Atención al cliente</li><li>Organización</li>
+              <li>Trabajo en equipo</li><li>Comunicación</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMACIÓN -->
+    <section id="formacion" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">04.</span> Formación y certificados</h2>
+        <div class="certs">
+          <article class="cert">
+            <div class="cert__badge">🎓</div>
+            <div>
+              <h3>Data Analytics</h3>
+              <p class="cert__org">Coderhouse · Noviembre 2026</p>
+              <p>10 semanas · 20 horas de formación en vivo y asincrónica.</p>
+              <a href="assets/certificado-data-analytics.pdf" target="_blank" rel="noopener" class="link">Ver certificado ↗</a>
+            </div>
+          </article>
+          <article class="cert">
+            <div class="cert__badge">🎓</div>
+            <div>
+              <h3>Desarrollo Web</h3>
+              <p class="cert__org">Coderhouse · Julio 2026</p>
+              <p>10 semanas · 20 horas de formación en vivo y asincrónica.</p>
+              <a href="assets/certificado-desarrollo-web.pdf" target="_blank" rel="noopener" class="link">Ver certificado ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <span class="timeline__date mono">2025 – Actualidad</span>
+            <h3>Licenciatura en Sistemas</h3>
+            <p>Universidad Nacional de Lanús (UNLa)</p>
+          </li>
+          <li>
+            <span class="timeline__date mono">2024</span>
+            <h3>Secundario: Ciencias Naturales</h3>
+            <p>Instituto Sagrado Corazón de Jesús</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <div class="container about">
+        <h2 class="section__title"><span class="mono">05.</span> Sobre mí</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>
+              Estudio <strong>Licenciatura en Sistemas</strong> en la Universidad Nacional de Lanús
+              y me formé en <strong>Desarrollo Web</strong> y <strong>Data Analytics</strong> en Coderhouse.
+            </p>
+            <p>
+              Me gusta hacer webs prolijas, rápidas y que se vean bien en el celular, que es
+              donde la mayoría de la gente compra. Mi primer cliente fue la pastelería donde
+              trabajo, y desde ahí sigo armando tiendas para otros emprendimientos.
+            </p>
+            <p>
+              Desde 2024 trabajo como <strong>asistente en la Pastelería Dulce Deleite</strong>:
+              preparo y organizo pedidos, coordino entregas y atiendo clientes. Eso me enseñó a
+              cumplir plazos y a entender qué necesita de verdad un negocio.
+            </p>
+            <a href="assets/CV-Martin-DAddona.pdf" class="link" download>Descargar mi CV (PDF) ↓</a>
+          </div>
+          <ul class="stats">
+            <li><strong>3</strong><span>webs publicadas</span></li>
+            <li><strong>2</strong><span>certificaciones Coderhouse</span></li>
+            <li><strong>2+</strong><span>años trabajando con clientes</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section--alt contact">
+      <div class="container contact__inner">
+        <h2 class="section__title section__title--center"><span class="mono">06.</span> Contacto</h2>
+        <p class="contact__text">
+          ¿Querés una web para tu emprendimiento o tenés una propuesta de trabajo?
+          Escribime y lo charlamos.
+        </p>
+        <div class="contact__actions">
+          <a href="https://wa.me/5491128383634" target="_blank" rel="noopener" class="btn btn--big">WhatsApp</a>
+          <a href="mailto:matudaddona@gmail.com" class="btn btn--big btn--ghost">matudaddona@gmail.com</a>
+        </div>
+        <ul class="socials">
+          <!-- TODO: reemplazar "#" por tu perfil de LinkedIn -->
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/matudaddona-spec" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="assets/CV-Martin-DAddona.pdf" download>CV (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Diseñado y desarrollado por Martín D'Addona · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5491128383634" class="wa-float" target="_blank" rel="noopener" aria-label="Escribime por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.94.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.23 9.43-9.44 9.43zm8.03-17.46A11.32 11.32 0 0 0 12.05.7C5.79.7.7 5.79.7 12.04c0 2 .52 3.95 1.52 5.67L.6 23.3l5.73-1.5a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.35-11.34 0-3.03-1.18-5.88-3.32-8.02z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

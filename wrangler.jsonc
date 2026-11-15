@@ -1,0 +1,9 @@
+{
+  // Portafolio de Martín D'Addona: sitio estático publicado en Cloudflare Workers
+  "name": "martin-daddona",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "single-page-application"
+  }
+}
