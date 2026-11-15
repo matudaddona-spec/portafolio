@@ -2,9 +2,9 @@
 
 Mi portafolio personal: proyectos, servicios, formación y contacto.
 
-**Web publicada:** https://martin-daddona.tienda-ar.workers.dev
+**Web publicada:** https://martin-daddona.pages.dev
 
-Hecho con HTML, CSS y JavaScript, sin frameworks. Está publicado en Cloudflare Workers.
+Hecho con HTML, CSS y JavaScript, sin frameworks. Está publicado en Cloudflare Pages.
 
 ## Cómo actualizarlo
 
