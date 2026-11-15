@@ -1,0 +1,55 @@
+@use "variables" as v;
+
+// ==========================================================
+// Mixins: bloques de código reutilizables
+// ==========================================================
+
+// Media query para pantallas de hasta cierto ancho
+@mixin hasta($ancho) {
+    @media (max-width: $ancho) {
+        @content;
+    }
+}
+
+// Estilos que se aplican cuando el dispositivo está en modo claro
+@mixin tema-claro {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}
+
+// Para quienes pidieron menos animaciones en su sistema
+@mixin sin-animaciones {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+// Fila flexible: los parámetros en null no se escriben en el CSS
+@mixin flex-fila($justificar: null, $gap: null, $envolver: null, $alinear: null) {
+    display: flex;
+    @if $envolver {
+        flex-wrap: wrap;
+    }
+    justify-content: $justificar;
+    align-items: $alinear;
+    gap: $gap;
+}
+
+// Caja con fondo, borde y esquinas redondeadas
+@mixin tarjeta($padding: null) {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: $padding;
+}
+
+// Sube un poco la tarjeta y resalta el borde al pasar el mouse
+@mixin elevar-al-pasar {
+    transition: border-color v.$transicion, transform v.$transicion;
+
+    &:hover {
+        border-color: var(--accent);
+        transform: translateY(-4px);
+    }
+}

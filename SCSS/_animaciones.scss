@@ -1,0 +1,28 @@
+@use "mixins" as m;
+
+// ==========================================================
+// Animación de aparición al hacer scroll (la activa script.js)
+// ==========================================================
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+
+    &.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@include m.sin-animaciones {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

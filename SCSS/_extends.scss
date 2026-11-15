@@ -1,0 +1,21 @@
+@use "variables" as v;
+
+// ==========================================================
+// Placeholders: estilos compartidos con @extend
+// ==========================================================
+
+// Cuadrado con un ícono centrado (servicios y certificados)
+%icono-cuadrado {
+    width: 48px;
+    height: 48px;
+    border-radius: v.$radio-icono;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    background: var(--accent-soft);
+}
+
+// Texto secundario en gris
+%texto-suave {
+    color: var(--muted);
+}

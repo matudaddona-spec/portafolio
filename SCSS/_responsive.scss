@@ -1,0 +1,107 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// ==========================================================
+// Responsive: tablets y celulares (mobile)
+// ==========================================================
+
+@include m.hasta(v.$escritorio-chico) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include m.hasta(v.$tablet) {
+    .about__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project--featured {
+        grid-template-columns: 1fr;
+
+        .project__img {
+            aspect-ratio: 16 / 10;
+            min-height: 0;
+            border-right: 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project__info {
+            padding: 24px;
+        }
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+            padding: 16px;
+        }
+
+        strong {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@include m.hasta(v.$celular) {
+    .nav__toggle {
+        display: block;
+    }
+
+    // El menú baja desde arriba cuando se toca la hamburguesa
+    .nav__menu {
+        position: fixed;
+        inset: v.$alto-nav 0 auto 0;
+        flex-direction: column;
+        gap: 20px;
+        padding: 28px 16px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        transform: translateY(-120%);
+        transition: transform .3s ease;
+        z-index: -1;
+
+        &.is-open {
+            transform: none;
+        }
+    }
+
+    // La hamburguesa se convierte en una X
+    .nav__toggle[aria-expanded="true"] span {
+        &:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+
+    .section {
+        padding: 72px 0;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .wa-float {
+        width: 50px;
+        height: 50px;
+        right: 16px;
+        bottom: 16px;
+    }
+}

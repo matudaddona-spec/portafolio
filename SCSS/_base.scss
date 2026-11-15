@@ -1,0 +1,88 @@
+@use "sass:meta";
+@use "variables" as v;
+@use "mixins" as m;
+
+// ==========================================================
+// Base: colores del tema, reseteo y utilidades
+// ==========================================================
+
+// Variables CSS: las usa todo el sitio y cambian con el modo claro
+:root {
+    --bg: #{v.$fondo};
+    --bg-alt: #{v.$fondo-alt};
+    --surface: #{v.$superficie};
+    --border: #{v.$borde};
+    --text: #{v.$texto};
+    --muted: #{v.$gris};
+    --accent: #{v.$acento};
+    --accent-2: #{v.$acento-2};
+    --accent-soft: #{v.$acento-suave};
+    --radius: #{v.$radio};
+    // meta.inspect mantiene las comillas de los nombres de las fuentes
+    --font: #{meta.inspect(v.$fuente)};
+    --mono: #{meta.inspect(v.$fuente-mono)};
+}
+
+@include m.tema-claro {
+    :root {
+        --bg: #{v.$fondo-claro};
+        --bg-alt: #{v.$fondo-alt-claro};
+        --surface: #{v.$superficie-claro};
+        --border: #{v.$borde-claro};
+        --text: #{v.$texto-claro};
+        --muted: #{v.$gris-claro};
+        --accent: #{v.$acento-claro};
+        --accent-2: #{v.$acento-2-claro};
+        --accent-soft: #{v.$acento-suave-claro};
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+// ---------- Utilidades ----------
+.container {
+    width: min(v.$ancho-maximo, 100% - 32px);
+    margin-inline: auto;
+}
+
+.mono {
+    font-family: var(--mono);
+}
+
+.accent {
+    color: var(--accent);
+}

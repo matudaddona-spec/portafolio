@@ -1,0 +1,48 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "extends";
+
+// ==========================================================
+// Contacto, redes y pie de página
+// ==========================================================
+
+.contact {
+    &__inner {
+        text-align: center;
+        max-width: 640px;
+    }
+
+    &__text {
+        @extend %texto-suave;
+        font-size: 1.1rem;
+        margin-bottom: 32px;
+    }
+
+    &__actions {
+        @include m.flex-fila($justificar: center, $envolver: true, $gap: 12px);
+    }
+}
+
+.socials {
+    @include m.flex-fila($justificar: center, $envolver: true, $gap: 24px);
+    margin-top: 32px;
+
+    a {
+        color: var(--muted);
+        font-weight: 500;
+        transition: color v.$transicion;
+
+        &:hover {
+            color: var(--accent);
+        }
+    }
+}
+
+// ---------- Footer ----------
+.footer {
+    padding: 28px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: .9rem;
+    border-top: 1px solid var(--border);
+}

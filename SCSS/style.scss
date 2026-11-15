@@ -1,0 +1,25 @@
+// ==========================================================
+// PORTAFOLIO · Martín D'Addona
+// Archivo principal: junta todos los partials en un solo CSS.
+// Para compilar:  npx sass --no-source-map SCSS/style.scss styles.css
+// ==========================================================
+
+// Base
+@use "base";
+@use "botones";
+
+// Componentes y secciones (en el orden en que aparecen en la página)
+@use "nav";
+@use "hero";
+@use "secciones";
+@use "sobre-mi";
+@use "tarjetas";
+@use "proyectos";
+@use "servicios";
+@use "formacion";
+@use "experiencia";
+@use "contacto";
+
+// Animaciones y responsive al final, para que pisen lo anterior
+@use "animaciones";
+@use "responsive";

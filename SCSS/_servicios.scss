@@ -1,0 +1,54 @@
+@use "variables" as v;
+@use "extends";
+
+// ==========================================================
+// Servicios y botón flotante de WhatsApp
+// ==========================================================
+
+.section__intro {
+    @extend %texto-suave;
+    font-size: 1.1rem;
+    margin: -24px 0 32px;
+    max-width: 600px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .card p {
+        color: var(--muted);
+    }
+
+    &__cta {
+        text-align: center;
+        margin-top: 36px;
+    }
+}
+
+.card__icon {
+    @extend %icono-cuadrado;
+    margin-bottom: 16px;
+}
+
+// ---------- WhatsApp flotante ----------
+.wa-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: v.$whatsapp;
+    color: v.$blanco;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+    transition: transform v.$transicion;
+
+    &:hover {
+        transform: scale(1.08);
+    }
+}

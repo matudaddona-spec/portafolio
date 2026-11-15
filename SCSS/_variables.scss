@@ -1,0 +1,47 @@
+// ==========================================================
+// Variables: colores, tipografías, medidas y breakpoints
+// ==========================================================
+
+// Tema oscuro (el que se ve por defecto)
+$fondo: #0b1220;
+$fondo-alt: #0f182a;
+$superficie: #142036;
+$borde: #22314d;
+$texto: #e6ecf5;
+$gris: #94a3b8;
+$acento: #2dd4bf;
+$acento-2: #38bdf8;
+$acento-suave: rgba(45, 212, 191, 0.12);
+
+// Tema claro (si la compu o el celular están en modo claro)
+$fondo-claro: #f8fafc;
+$fondo-alt-claro: #eef3f8;
+$superficie-claro: #ffffff;
+$borde-claro: #dbe3ee;
+$texto-claro: #0f172a;
+$gris-claro: #526077;
+$acento-claro: #0d9488;
+$acento-2-claro: #0284c7;
+$acento-suave-claro: rgba(13, 148, 136, 0.1);
+
+// Otros colores
+$texto-boton: #04201c;
+$whatsapp: #25d366;
+$blanco: #fff;
+
+// Tipografías
+$fuente: "Inter", system-ui, -apple-system, sans-serif;
+$fuente-mono: "JetBrains Mono", ui-monospace, monospace;
+
+// Medidas
+$radio: 14px;
+$radio-boton: 10px;
+$radio-icono: 12px;
+$ancho-maximo: 1100px;
+$alto-nav: 64px;
+$transicion: .2s;
+
+// Breakpoints (responsive)
+$escritorio-chico: 960px;
+$tablet: 860px;
+$celular: 720px;

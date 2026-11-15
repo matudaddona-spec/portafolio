@@ -1,4 +1,9 @@
-// Menú hamburguesa (mobile)
+/* ==========================================================
+   PORTAFOLIO · Martín D'Addona
+   Menú del celular, animaciones al hacer scroll y año del footer.
+   ========================================================== */
+
+/* MENÚ HAMBURGUESA (mobile) */
 const toggle = document.querySelector('.nav__toggle');
 const menu = document.querySelector('.nav__menu');
 
@@ -14,7 +19,7 @@ menu.querySelectorAll('a').forEach((link) =>
   })
 );
 
-// Animación de aparición al hacer scroll
+/* ANIMACIÓN DE APARICIÓN AL HACER SCROLL */
 const targets = document.querySelectorAll('.section__title, .card, .project, .cert, .about__grid, .timeline');
 targets.forEach((el) => el.classList.add('reveal'));
 
@@ -31,5 +36,5 @@ const observer = new IntersectionObserver(
 );
 targets.forEach((el) => observer.observe(el));
 
-// Año actual en el footer
+/* AÑO ACTUAL EN EL FOOTER */
 document.getElementById('year').textContent = new Date().getFullYear();

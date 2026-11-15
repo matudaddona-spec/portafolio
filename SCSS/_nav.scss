@@ -1,0 +1,62 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// ==========================================================
+// Barra de navegación
+// ==========================================================
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+
+    &__inner {
+        @include m.flex-fila($justificar: space-between, $alinear: center);
+        height: v.$alto-nav;
+    }
+
+    &__logo {
+        font-weight: 800;
+        font-size: 1.4rem;
+        letter-spacing: -0.02em;
+
+        span {
+            color: var(--accent);
+        }
+    }
+
+    &__menu {
+        @include m.flex-fila($alinear: center, $gap: 28px);
+        font-size: .95rem;
+
+        a:not(.btn) {
+            color: var(--muted);
+            transition: color v.$transicion;
+
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+
+    // Botón hamburguesa: solo se muestra en celulares
+    &__toggle {
+        display: none;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        padding: 8px;
+
+        span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px 0;
+            transition: .3s;
+        }
+    }
+}

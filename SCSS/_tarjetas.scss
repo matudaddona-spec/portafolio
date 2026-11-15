@@ -1,0 +1,41 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// ==========================================================
+// Habilidades: tarjetas y etiquetas (chips)
+// ==========================================================
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    @include m.tarjeta(24px);
+    @include m.elevar-al-pasar;
+
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+}
+
+.chips,
+.tags {
+    @include m.flex-fila($envolver: true, $gap: 8px);
+
+    li {
+        font-size: .85rem;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-weight: 500;
+    }
+}
+
+.tags li {
+    font-family: var(--mono);
+    font-size: .78rem;
+}
