@@ -2,7 +2,7 @@
 
 Mi portafolio personal: proyectos, servicios, formación y contacto.
 
-**Web publicada:** https://martin-daddona.pages.dev
+**Web publicada:** https://portafolio-martin-daddona.pages.dev
 
 Hecho con HTML, CSS y JavaScript, sin frameworks. Está publicado en Cloudflare Pages.
 
